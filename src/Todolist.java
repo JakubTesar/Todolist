@@ -38,7 +38,6 @@ public class Todolist {
                 String druhezvoleni = sc.nextLine();
 
 
-
                 if (druhezvoleni.contains("1")) {                   //Task management (1
                     problem++;
                     System.out.println("Enter name of the new task:");
@@ -49,11 +48,7 @@ public class Todolist {
                             "You have " + pocitanitask + "/10!\n" +
                             "#" + a + " – " + newtask[a]);
                     a++;
-                    for (int i = 0; i < newtask.length; i++) {
-                        System.out.println(newtask[i]);
-                    }
                 }
-
                 if (druhezvoleni.contains("2")) {                                                  //Task management (2
                     System.out.println("Select number of task:");
                     String cislotasku = sc.nextLine();
@@ -74,18 +69,21 @@ public class Todolist {
                     System.exit(0);
                 }
                 if (druhezvoleni.contains("5")) {
-                    for (int i = 0; i < newtask.length; i++) {
-                        System.out.println(newtask[i]);
+                    for (int i = 0; i < newtask.length;) {
+                        if (newtask[i] != null) {
+                            System.out.println(i+". "+newtask[i]);
+                        }
+                        i++;
                     }
                 }
             }
-        }
-        if (prvnizvoleni.contains("2")) {
-            System.exit(0);
-        }
-        //if (!prvnizvoleni.contains("1") && !prvnizvoleni.contains("2")) {
-        //    System.out.println("Try it again");
-        // }
+            if (prvnizvoleni.contains("2")) {
+                System.exit(0);
+            }
+            //if (!prvnizvoleni.contains("1") && !prvnizvoleni.contains("2")) {
+            //    System.out.println("Try it again");
+            // }
 
+        }
     }
 }

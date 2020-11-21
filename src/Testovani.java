@@ -60,15 +60,17 @@ public class Testovani {
 
                 if (druhezvoleni.contains("3")) {                                           //Task management (3
                     System.out.println("What task number you want to delete?");
-                    String targer = sc.nextLine();
-                    int target2 = Integer.parseInt(targer);
-                    newtask[target2] = null;
+                    String target = sc.nextLine();
+                    int target2 = Integer.parseInt(target);
+                    newtask[target2] = "null";
+
                 }
 
                 if (druhezvoleni.contains("4")) {                                               //Task management (4
                     System.exit(0);
                 }
                 if (druhezvoleni.contains("5")) {
+                    System.out.println("null značí žádný úkol!");
                     for (int i = 0; i < newtask.length;) {
                         if (newtask[i] != null) {
                             System.out.println(i+". "+newtask[i]);
